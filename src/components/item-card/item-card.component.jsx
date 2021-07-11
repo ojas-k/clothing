@@ -8,6 +8,11 @@ const ItemCard=({item})=>(
         style={{backgroundImage:`url(${item.imageUrl})`}}>
         </div>
 
+        <div className='footer'>
+            <div className='product-name'>{item.title.toUpperCase()}</div>
+            <div className='product-price'>${item.price}</div>
+        </div>
+
         {console.log(item.imageUrl)}
 
     </div>
