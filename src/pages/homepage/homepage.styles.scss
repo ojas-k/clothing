@@ -12,7 +12,8 @@
 }
 
 .item-display{
-    background-color: blue;
-    height: 500px;
-    width:100vw;
+    padding-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
 }

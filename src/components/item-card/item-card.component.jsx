@@ -1,9 +1,14 @@
 import React from 'react';
 import './item-card.styles.scss';
 
-const ItemCard=(item)=>(
+const ItemCard=({item})=>(
     <div className='item-card'>
-        <img src={this.item.imageUrl} className='item-image'/>
+
+        <div className='image'
+        style={{backgroundImage:`url(${item.imageUrl})`}}>
+        </div>
+
+        {console.log(item.imageUrl)}
 
     </div>
 )

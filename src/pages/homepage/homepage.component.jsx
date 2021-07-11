@@ -16,9 +16,10 @@ const Homepage = ({tshirts}) => (
         </div>
 
         <div className= 'item-display'>
-
-            {tshirts.map(item=><div> {item.title}</div>)}
-            {console.log({tshirts})}
+                
+            {tshirts.map(item=>
+                <ItemCard item={item} key={item.id}/>)}
+                 
            
 
         </div>
