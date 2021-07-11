@@ -16,9 +16,10 @@ const Homepage = ({tshirts}) => (
         </div>
 
         <div className= 'item-display'>
-            {
-                console.log(tshirts)
-            }
+
+            {tshirts.map(item=><div> {item.title}</div>)}
+            {console.log({tshirts})}
+           
 
         </div>
 

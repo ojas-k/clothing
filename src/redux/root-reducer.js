@@ -8,4 +8,4 @@ const rootReducer = combineReducers({
   shop:shopReducer
 })
 
-export default rootReducer
+export default rootReducer;

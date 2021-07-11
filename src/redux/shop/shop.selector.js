@@ -5,6 +5,7 @@ export const selectShop = state => state.shop
 
 export const selectTshirtsFromShop=createSelector(
     [selectShop],
-    shop => shop.tshirt
+    shop => shop.collection.tshirt
 )
+
 
