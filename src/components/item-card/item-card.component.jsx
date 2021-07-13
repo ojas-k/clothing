@@ -1,15 +1,20 @@
 import React from 'react';
 import './item-card.styles.scss';
+import {withRouter} from 'react-router-dom';
 
 import CustomButton from '../custom-button/custom-button.component';
 
-const ItemCard=({item})=>(
-    <div className='item-card'>
+const ItemCard=({item, history,match })=>(
+    <div className='item-card'
+    onClick={history.push(`/page/${item.id}`)} >
+        
 
         <div className='image'
-        style={{backgroundImage:`url(${item.imageUrl})`}}>
-        <CustomButton>Add to Cart</CustomButton>
-        </div>
+        style={{backgroundImage:`url(${item.imageUrl})`}}
+        
+        />
+        
+       
 
         <div className='footer'>
             <div className='product-name'>{item.title.toUpperCase()}</div>
@@ -21,4 +26,4 @@ const ItemCard=({item})=>(
     </div>
 )
 
-export default ItemCard;
+export default withRouter(ItemCard);

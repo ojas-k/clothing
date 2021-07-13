@@ -8,6 +8,7 @@ import {auth, createUserProfileDocument} from './firebase/firebase.utils';
 import Header from './components/header/header.component';
 import Homepage from './pages/homepage/homepage.component';
 import SignInAndSignUpPage from './pages/sign-in-and-sign-up/sign-in-and-sign-up.component';
+import Itempage from './pages/itempage/itempage.component';
 
 
 class App extends React.Component {
@@ -52,8 +53,9 @@ class App extends React.Component {
       <div className='body'>
         <Header/>
         <Switch>
-          <Route exact path='/' component={Homepage}/>
+          <Route exact path='/' component = {Homepage}/>
           <Route exact path='/signin' component={SignInAndSignUpPage}/>
+          <Route exact path ='/page/:name' component={Itempage}/>
         <Homepage/>
         </Switch>
 
