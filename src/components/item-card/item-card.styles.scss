@@ -4,6 +4,7 @@
     height:350px;
     cursor: pointer;
     opacity: 100%;
+    align-items: center;
 
 
     &:hover {
@@ -18,13 +19,6 @@
         }
         
     }
-
-}
-
-
-.image {
-    
-    width:auto
 
 }
 
@@ -50,8 +44,8 @@
 .custom-button {
     width: 80%;
     opacity: 0.7;
-    position:absolute;
-    top: 60%;
+    position:relative;
+    top: 80%;
     display: none;
-
+    margin: auto;    
 }
