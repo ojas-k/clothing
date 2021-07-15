@@ -6,7 +6,7 @@ import CustomButton from '../custom-button/custom-button.component';
 
 const ItemCard=({item, history,match })=>(
     <div className='item-card'
-    onClick={history.push(`/page/${item.id}`)} >
+    onClick={()=> history.push(`${match.url}${item.name}`)} >
         
 
         <div className='image'
