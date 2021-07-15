@@ -26,7 +26,7 @@ export const SHOP_DATA= {
 
 {
     id:3,
-    title:'one',
+    title:'three',
     imageUrl:'https://i.ibb.co/nwWj20V/temp-6-09-23-PM.jpg',
     price:25,
     color:'black',
@@ -37,7 +37,7 @@ export const SHOP_DATA= {
 
 {
     id:4,
-    title:'two',
+    title:'four',
     imageUrl:'https://i.ibb.co/1XfC8cC/tempp.jpg',
     price:30,
     color:'olive green',
@@ -49,7 +49,7 @@ export const SHOP_DATA= {
 
 {
     id:5,
-    title:'one',
+    title:'five',
     imageUrl:'https://i.ibb.co/nwWj20V/temp-6-09-23-PM.jpg',
     price:25,
     color:'black',
@@ -60,7 +60,7 @@ export const SHOP_DATA= {
 
 {
     id:6,
-    title:'two',
+    title:'six',
     imageUrl:'https://i.ibb.co/1XfC8cC/tempp.jpg',
     price:30,
     color:'olive green',
@@ -72,7 +72,7 @@ export const SHOP_DATA= {
 
 {
     id:7,
-    title:'one',
+    title:'seven',
     imageUrl:'https://i.ibb.co/nwWj20V/temp-6-09-23-PM.jpg',
     price:25,
     color:'black',
@@ -83,7 +83,7 @@ export const SHOP_DATA= {
 
 {
     id:8,
-    title:'two',
+    title:'eight',
     imageUrl:'https://i.ibb.co/1XfC8cC/tempp.jpg',
     price:30,
     color:'olive green',
