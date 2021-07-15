@@ -3,29 +3,37 @@ import './homepage.styles.scss';
 
 import {connect} from 'react-redux';
 import { createStructuredSelector } from 'reselect';
+import {Route} from 'react-router-dom';
+import { getByTitle } from '@testing-library/dom';
+
 
 
 import {selectTshirtsFromShop} from '../../redux/shop/shop.selector'
 import ItemCard from '../../components/item-card/item-card.component'
+import ItemPage from '../itempage/itempage.component'
 
 
-const Homepage = ({tshirts}) => (
+const Homepage = ({tshirts, match}) => {
+    console.log('the match object in the homepage is')
+    console.log(match)
+    
+    return(
+
     <div className='homepage'>
 
-        <div className='banner'>
+        <div className='routing-div'>
+        <Route path={`${match.path}/:collectionId`} component={ItemPage}/>
         </div>
 
-        <div className= 'item-display'>
-                
+        <div className='banner'></div>
+
+        <div className= 'item-display'>   
             {tshirts.map(item=>
                 <ItemCard item={item} key={item.id}/>)}
-                 
-           
-
         </div>
 
     </div>
-)
+)}
 
 const mapStateToProps = createStructuredSelector({
     tshirts:selectTshirtsFromShop
