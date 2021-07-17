@@ -4,7 +4,7 @@ import './header.styles.scss';
 import {Link} from 'react-router-dom'
 
 
-import {CartIcon} from '../cart-icon/cart-icon.component'
+import CartIcon from '../cart-icon/cart-icon.component'
 
 const Header = () => (
     <div className='header'>

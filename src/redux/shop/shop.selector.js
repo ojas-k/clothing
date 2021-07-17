@@ -8,4 +8,10 @@ export const selectTshirtsFromShop=createSelector(
     shop => shop.collection.tshirt
 )
 
+export const selectTshirt = collectionUrlParam =>
+  createSelector(
+    [selectTshirtsFromShop],
+    tshirts => tshirts[collectionUrlParam]
+  );
+
 

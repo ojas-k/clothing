@@ -1,11 +1,23 @@
 import React from 'react';
 
-const Itempage =({match})=>{
-    console.log('itempage being called')
+import {connect} from 'react-redux';
+
+import {selectTshirt} from '../../redux/shop/shop.selector'
+
+const Itempage =({tshirt})=>{
     return(
     <div>
-        <h1>{match.params.name}</h1>
+        <h1>ITEMPAGE</h1>
     </div>
 )}
 
-export default Itempage;
+
+const mapStateToProps = (state, ownProps)=>{
+
+    
+    return({
+    tshirt:selectTshirt(ownProps.match.params.collectionId)(state)
+})}
+
+
+export default connect(mapStateToProps)(Itempage);

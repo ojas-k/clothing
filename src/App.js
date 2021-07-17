@@ -4,6 +4,8 @@ import './App.css';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import {auth, createUserProfileDocument} from './firebase/firebase.utils';
 import { BrowserRouter } from 'react-router-dom';
+import {connect} from 'react-redux';
+import { createStructuredSelector } from 'reselect';
 
 
 import Header from './components/header/header.component';
@@ -12,8 +14,8 @@ import SignInAndSignUpPage from './pages/sign-in-and-sign-up/sign-in-and-sign-up
 import Itempage from './pages/itempage/itempage.component';
 import {selectCurrentUser} from './redux/user/user.selectors';
 import setCurrentUser from './redux/user/user.actions';
-import {connect} from 'react-redux';
-import { createStructuredSelector } from 'reselect';
+import ItemPage from './pages/itempage/itempage.component'
+
 
 
 class App extends React.Component {
@@ -69,16 +71,12 @@ class App extends React.Component {
         {console.log(window.location.href)}
 
         <Header/>
-        <BrowserRouter>
         <Switch>
           <Route exact path='/' component = {Homepage}/>
           <Route exact path='/signin' component={SignInAndSignUpPage}/>
+          
+          <Route path={`/:collectionId`} component={ItemPage}/>
         </Switch>
-        </BrowserRouter>
-
-
-
-
 
       </div>
 

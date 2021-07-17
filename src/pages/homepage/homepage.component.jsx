@@ -27,7 +27,7 @@ const Homepage = ({tshirts, match}) => {
 
         <div className='banner'></div>
 
-        <div className= 'item-display'>   
+        <div className= 'item-display'>  
             {tshirts.map(item=>
                 <ItemCard item={item} key={item.id}/>)}
         </div>
