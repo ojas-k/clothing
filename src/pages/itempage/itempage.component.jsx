@@ -8,6 +8,8 @@ const Itempage =({tshirt})=>{
     return(
     <div>
         <h1>ITEMPAGE</h1>
+        {console.log('inside itempage')}
+        {console.log(tshirt)}
     </div>
 )}
 

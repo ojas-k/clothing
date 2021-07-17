@@ -11,7 +11,16 @@ export const selectTshirtsFromShop=createSelector(
 export const selectTshirt = collectionUrlParam =>
   createSelector(
     [selectTshirtsFromShop],
-    tshirts => tshirts[collectionUrlParam]
+    tshirts => {
+      tshirts.map(tshirt => 
+      
+      {
+      if(tshirt.title==collectionUrlParam)
+      {
+        return tshirt
+      }
+      })
+    }
   );
 
 
