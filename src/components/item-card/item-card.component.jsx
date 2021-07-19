@@ -4,15 +4,13 @@ import {withRouter} from 'react-router-dom';
 
 import CustomButton from '../custom-button/custom-button.component';
 
-const ItemCard=({item, history,match })=>(
+const ItemCard=({item,history,match })=>(
     <div className='item-card'
     onClick={()=> history.push(`${match.url}${item.title}`)} >
         
 
         <div className='image'
-        style={{backgroundImage:`url(${item.imageUrl})`}}
-        
-        />
+        style={{backgroundImage:`url(${item.imageUrl})`}}/>
         
        
 
@@ -20,8 +18,6 @@ const ItemCard=({item, history,match })=>(
             <div className='product-name'>{item.title.toUpperCase()}</div>
             <div className='product-price'>${item.price}</div>
         </div>
-
-        {console.log(item.imageUrl)}
 
     </div>
 )
