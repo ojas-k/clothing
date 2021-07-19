@@ -1,12 +1,18 @@
 import React from 'react';
 import './header.styles.scss';
+import CartDropdown from '../cart-dropdown/cart-dropdown.component';
+import { createStructuredSelector } from 'reselect';
+import {selectCartHidden} from '../../redux/cart/cart-selector';
+import { connect } from 'react-redux';
+
+
 
 import {Link} from 'react-router-dom'
 
 
 import CartIcon from '../cart-icon/cart-icon.component'
 
-const Header = () => (
+const Header = ({hidden}) => (
     <div className='header'>
         <Link className='logo-container' to='/'>
             CLOTHING
@@ -25,9 +31,16 @@ const Header = () => (
 
 
         </div>
+        
+            {hidden?null:<CartDropdown/>}
+        
 
     </div>
 
 );
 
-export default Header;
+const mapStatetoProps= createStructuredSelector({
+    hidden:selectCartHidden
+});
+
+export default connect(mapStatetoProps)(Header);

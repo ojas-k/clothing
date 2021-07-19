@@ -25,7 +25,9 @@ const Homepage = ({tshirts, match}) => {
         <Route path={`${match.path}/:collectionId`} component={ItemPage}/>
         </div>
 
-        <div className='banner'></div>
+        <div className='banner'>
+            <h1>STAY HARD</h1>
+        </div>
 
         <div className= 'item-display'>  
             {tshirts.map(item=>
