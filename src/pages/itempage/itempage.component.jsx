@@ -1,43 +1,35 @@
 import React from 'react';
-
 import {connect} from 'react-redux';
-
+import { createStructuredSelector } from 'reselect';
 import {selectTshirt} from '../../redux/shop/shop.selector';
-import selectTshirtsFromShop from '../../redux/shop/shop.selector'
 
-const Itempage =({tshirt})=>{
+
+
+
+
+const Itempage =({tshirt, match})=>{
     return(
-    <div>
-        <h1>ITEMPAGE</h1>
-        {console.log('inside itempage')}
-        {console.log(tshirt)}
+    <div className='container'>
+         
+        <div className='image1'
+        style={{backgroundImage:`url(${tshirt.imageUrl})`}}/>
+        
+       
+
+        <div className='data'>
+            <div className='product-name'>{tshirt.title.toUpperCase()}</div>
+            <div className='product-price'>${tshirt.price}</div>
+        </div>
+       
+        
+        
     </div>
 )}
 
 
-const mapStateToProps = (state, ownProps)=>{
-    const tshirts = selectTshirtsFromShop(state)
-    const selectedtshirt=null
-    collectionUrlParam=ownProps.match.params.collectionId
-    tshirts.map(tshirt=>
-        if(tshirt.title==collectionUrlParam) {
-            selectedtshirt=tshirt
-        }
-        
-        )
-
-    
-    return({
-
-        if(tshirt.title==collectionUrlParam)
-      {
-        return tshirt
-      }
-
-
-
-    tshirt:selectTshirt(ownProps.match.params.collectionId)(state)
-})}
+const mapStateToProps = (state, ownProps)=>({
+    tshirt: selectTshirt(ownProps.match.params.collectionId)(state)
+});
 
 
 export default connect(mapStateToProps)(Itempage);

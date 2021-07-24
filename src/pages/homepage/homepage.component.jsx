@@ -5,6 +5,7 @@ import {connect} from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 import {Route} from 'react-router-dom';
 import { getByTitle } from '@testing-library/dom';
+import Sliderr from '../../components/slider/slider.component';
 
 
 
@@ -25,7 +26,9 @@ const Homepage = ({tshirts, match}) => {
         <Route path={`${match.path}/:collectionId`} component={ItemPage}/>
         </div>
 
-        <div className='banner'></div>
+        <div className='banner'>
+           <Sliderr/> 
+        </div>
 
         <div className= 'item-display'>  
             {tshirts.map(item=>
