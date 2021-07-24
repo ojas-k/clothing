@@ -8,7 +8,7 @@ export const SHOP_DATA= {
     price:25,
     color:'black',
     material:'cotton',
-    description:'',
+    description:'Half Sleeve STAY HARD signature David Goggins tshirt',
 
 },
 
@@ -19,7 +19,7 @@ export const SHOP_DATA= {
     price:30,
     color:'olive green',
     material:'synthetic',
-    description:'',
+    description:'Half Sleeve STAY HARD signature David Goggins tshirt',
 
 },
 
@@ -31,7 +31,7 @@ export const SHOP_DATA= {
     price:25,
     color:'black',
     material:'cotton',
-    description:'',
+    description:'Half Sleeve STAY HARD signature David Goggins tshirt',
 
 },
 
@@ -42,7 +42,7 @@ export const SHOP_DATA= {
     price:30,
     color:'olive green',
     material:'synthetic',
-    description:'',
+    description:'Half Sleeve STAY HARD signature David Goggins tshirt',
 
 },
 
@@ -54,7 +54,7 @@ export const SHOP_DATA= {
     price:25,
     color:'black',
     material:'cotton',
-    description:'',
+    description:'Half Sleeve STAY HARD signature David Goggins tshirt',
 
 },
 
@@ -65,7 +65,7 @@ export const SHOP_DATA= {
     price:30,
     color:'olive green',
     material:'synthetic',
-    description:'',
+    description:'Half Sleeve STAY HARD signature David Goggins tshirt',
 
 },
 
@@ -77,7 +77,7 @@ export const SHOP_DATA= {
     price:25,
     color:'black',
     material:'cotton',
-    description:'',
+    description:'Half Sleeve STAY HARD signature David Goggins tshirt',
 
 },
 
@@ -88,7 +88,7 @@ export const SHOP_DATA= {
     price:30,
     color:'olive green',
     material:'synthetic',
-    description:'',
+    description:'Half Sleeve STAY HARD signature David Goggins tshirt',
 
 }
 

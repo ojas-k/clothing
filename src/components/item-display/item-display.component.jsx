@@ -6,17 +6,11 @@ import { createStructuredSelector } from 'reselect';
 
 import {selectTshirtsFromShop} from '../../redux/shop/shop.selector'
 
-const ItemDisplay = (props) =>{
-    
-    const tshirts=this.props.tshirts;
-    const tshirt=this.props.tshirt;
-    
-    return(
+const ItemDisplay = ({tshirts}) =>{
     <div>
         
     </div>
-)}
-
+}
 
 const mapStateToProps = createStructuredSelector({
     tshirts:selectTshirtsFromShop
