@@ -11,10 +11,11 @@ import { createStructuredSelector } from 'reselect';
 import Header from './components/header/header.component';
 import Homepage from './pages/homepage/homepage.component';
 import SignInAndSignUpPage from './pages/sign-in-and-sign-up/sign-in-and-sign-up.component';
-import Itempage from './pages/itempage/itempage.component';
+
 import {selectCurrentUser} from './redux/user/user.selectors';
 import setCurrentUser from './redux/user/user.actions';
-import ItemPage from './pages/itempage/itempage.component'
+import ItemPage from './pages/itempage/itempage.component';
+
 
 
 
