@@ -4,8 +4,10 @@ import './homepage.styles.scss';
 import {connect} from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 import {Route} from 'react-router-dom';
-import { getByTitle } from '@testing-library/dom';
-import Sliderr from '../../components/slider/slider.component';
+import Sliderr from '../../components/bootstrap/slider/slider.component';
+
+
+
 
 
 
@@ -27,7 +29,8 @@ const Homepage = ({tshirts, match}) => {
         </div>
 
         <div className='banner'>
-           <Sliderr/> 
+
+            <Sliderr/>
         </div>
 
         <div className= 'item-display'>  
