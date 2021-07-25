@@ -11,7 +11,7 @@ import { createStructuredSelector } from 'reselect';
 import Header from './components/header/header.component';
 import Homepage from './pages/homepage/homepage.component';
 import SignInAndSignUpPage from './pages/sign-in-and-sign-up/sign-in-and-sign-up.component';
-
+import CheckoutPage from './pages/checkout/checkout.component' ;
 import {selectCurrentUser} from './redux/user/user.selectors';
 import setCurrentUser from './redux/user/user.actions';
 import ItemPage from './pages/itempage/itempage.component';
@@ -75,6 +75,7 @@ class App extends React.Component {
         <Switch>
           <Route exact path='/' component = {Homepage}/>
           <Route exact path='/signin' component={SignInAndSignUpPage}/>
+          <Route path='/checkout' exact component={CheckoutPage}/>
           
           <Route path={`/:collectionId`} component={ItemPage}/>
         </Switch>

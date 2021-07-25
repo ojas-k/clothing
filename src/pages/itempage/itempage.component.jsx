@@ -1,15 +1,21 @@
 import React from 'react';
+import './itempage.component.styles.scss';
+
+
+
 import {connect} from 'react-redux';
 import { createStructuredSelector } from 'reselect';
+
+
 import {selectTshirt} from '../../redux/shop/shop.selector';
-import './itempage.component.styles.scss';
 import CustomButton from '../../components/custom-button/custom-button.component';
+import {addItem} from '../../redux/cart/cart-actions';
 
 
 
 
 
-const Itempage =({tshirt, match})=>{
+const Itempage =({tshirt, match, addItem})=>{
     return(
     <div className='container-div'>
          <div className='image-holder'>
@@ -23,7 +29,7 @@ const Itempage =({tshirt, match})=>{
             <div className='product-price'><h4> DESCRIPTION: {tshirt.description}</h4></div>
         </div>
         <div className='buttonss'>
-        <CustomButton>ADD TO CART</CustomButton>
+        <CustomButton onClick={()=> addItem(tshirt)} >ADD TO CART</CustomButton>
         <CustomButton>GO TO CHECKOUT</CustomButton>
         </div>
     </div>
@@ -34,5 +40,9 @@ const mapStateToProps = (state, ownProps)=>({
     tshirt: selectTshirt(ownProps.match.params.collectionId)(state)
 });
 
+const mapDispatchToProps = dispatch => ({
+    addItem: tshirt => dispatch(addItem(tshirt))
+})
 
-export default connect(mapStateToProps)(Itempage);
+
+export default connect(mapStateToProps,mapDispatchToProps)(Itempage);
