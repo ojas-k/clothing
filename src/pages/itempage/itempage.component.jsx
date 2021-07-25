@@ -15,7 +15,7 @@ import {addItem} from '../../redux/cart/cart-actions';
 
 
 
-const Itempage =({tshirt, match, addItem})=>{
+const Itempage =({tshirt, match, addItem, history})=>{
     return(
     <div className='container-div'>
          <div className='image-holder'>
@@ -31,7 +31,7 @@ const Itempage =({tshirt, match, addItem})=>{
         </div>
         <div className='buttonss'>
         <CustomButton onClick={()=> addItem(tshirt)} >ADD TO CART</CustomButton>
-        <CustomButton>GO TO CHECKOUT</CustomButton>
+        <CustomButton onClick={()=> history.push('/checkout')}>GO TO CHECKOUT</CustomButton>
         </div>
         </div>
     </div>
