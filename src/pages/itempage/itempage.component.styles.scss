@@ -1,14 +1,21 @@
-.image-holder{
-    float: left;
-    
-}
-.data{
-    padding-top: 200px;
-    padding-left: 650px;
-
-  
-}
-.buttonss{
+.container-div {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
-  }
+    padding-right: 5%;
+    size: 100vw;
+}
+
+.complete-data {
+margin: auto;
+}
+
+.buttonss {
+    padding-top: 5%;
+    display: flex;
+    flex-direction: row;
+}
+
+.custom-button {
+    width: 40%;
+}

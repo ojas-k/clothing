@@ -6,11 +6,6 @@ import { createStructuredSelector } from 'reselect';
 import {Route} from 'react-router-dom';
 import Sliderr from '../../components/bootstrap/slider/slider.component';
 
-
-
-
-
-
 import {selectTshirtsFromShop} from '../../redux/shop/shop.selector'
 import ItemCard from '../../components/item-card/item-card.component'
 import ItemPage from '../itempage/itempage.component'
