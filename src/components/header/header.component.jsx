@@ -24,9 +24,17 @@ const Header = ({hidden, toggleCartHidden}) => (
                 CONTACT US
             </Link>
 
+
+            {currentUser ? (
+            <div className='option' onClick={() => auth.signOut()}>
+            SIGN OUT
+            </div>) :(
             <Link className='option' to='/signin'>
-                SIGN IN
+            SIGN IN
             </Link>
+            )}
+
+
             <div onClick={toggleCartHidden}>
 
             <CartIcon className='cart-icon'/>
