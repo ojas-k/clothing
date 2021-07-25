@@ -21,6 +21,7 @@ const Itempage =({tshirt, match, addItem})=>{
          <div className='image-holder'>
              <img src={`${tshirt.imageUrl}`} width='600px' height='auto'></img>
          </div>
+         <div className='complete-data'>
         <div className='data'>
             <div className='product-name'><h2>NAME: {tshirt.title.toUpperCase()}</h2></div>
             <div className='product-price'><h3> PRICE: ${tshirt.price}</h3></div>
@@ -31,6 +32,7 @@ const Itempage =({tshirt, match, addItem})=>{
         <div className='buttonss'>
         <CustomButton onClick={()=> addItem(tshirt)} >ADD TO CART</CustomButton>
         <CustomButton>GO TO CHECKOUT</CustomButton>
+        </div>
         </div>
     </div>
 )}
