@@ -15,6 +15,7 @@ import CheckoutPage from './pages/checkout/checkout.component' ;
 import {selectCurrentUser} from './redux/user/user.selectors';
 import setCurrentUser from './redux/user/user.actions';
 import ItemPage from './pages/itempage/itempage.component';
+import Contact from './pages/contact/contact.component';
 
 
 
@@ -76,6 +77,7 @@ class App extends React.Component {
           <Route exact path='/' component = {Homepage}/>
           <Route exact path='/signin' component={SignInAndSignUpPage}/>
           <Route path='/checkout' exact component={CheckoutPage}/>
+          <Route path='/contact' exact component={Contact}/>
           
           <Route path={`/:collectionId`} component={ItemPage}/>
         </Switch>
