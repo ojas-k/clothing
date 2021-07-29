@@ -4,7 +4,11 @@ const selectCart = (state)=> state.cart;
 
 export const selectCartItems= createSelector(
 [selectCart],
-(cart)=>cart.cartItems
+(cart)=>{
+    console.log('inside selectcartitem');
+    console.log(cart.cartItems)
+    return(cart.cartItems)
+}
 )
 
 export const selectCartHidden = createSelector(

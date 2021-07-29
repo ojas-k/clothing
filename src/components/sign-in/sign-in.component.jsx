@@ -10,7 +10,6 @@ import './sign-in.styles.scss';
 class SignIn extends React.Component {
   constructor(props) {
     super(props);
-    console.log('constructor')
 
     this.state = {
       email: '',
@@ -19,7 +18,6 @@ class SignIn extends React.Component {
   }
 
   handleSubmit = async event => {
-      console.log('handle submit')
     event.preventDefault();
     const {email, password}=this.state;
     try {
@@ -32,7 +30,6 @@ class SignIn extends React.Component {
   };
 
   handleChange = event => {
-    console.log('handle change')
 
     const { value, name } = event.target;
 
@@ -40,7 +37,6 @@ class SignIn extends React.Component {
   };
 
   render() {
-      console.log('render')
 
     return (
        
@@ -50,7 +46,6 @@ class SignIn extends React.Component {
         <span>Sign in with your email and password</span>
 
         <form onSubmit={this.handleSubmit}>
-        {console.log('before email input')}
 
           <FormInput
             name='email'
@@ -61,7 +56,6 @@ class SignIn extends React.Component {
             required
           />
 
-          {console.log('email input')}
 
           <FormInput
             name='password'

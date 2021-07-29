@@ -4,7 +4,7 @@ import CartDropdown from '../cart-dropdown/cart-dropdown.component';
 import { createStructuredSelector } from 'reselect';
 import {selectCartHidden} from '../../redux/cart/cart-selector';
 import { connect } from 'react-redux';
-import { toggleCartHidden } from '../../redux/cart/cart-actions';
+import { toggleCart } from '../../redux/cart/cart-actions';
 
 
 
@@ -24,17 +24,9 @@ const Header = ({hidden, toggleCartHidden}) => (
                 CONTACT US
             </Link>
 
-
-            {currentUser ? (
-            <div className='option' onClick={() => auth.signOut()}>
-            SIGN OUT
-            </div>) :(
             <Link className='option' to='/signin'>
-            SIGN IN
+                SIGN IN
             </Link>
-            )}
-
-
             <div onClick={toggleCartHidden}>
 
             <CartIcon className='cart-icon'/>
@@ -54,8 +46,6 @@ const mapStatetoProps= createStructuredSelector({
     hidden:selectCartHidden
 });
 
-const mapDispatchToProps = dispatch => ({
-    toggleCartHidden: () => dispatch(toggleCartHidden())
-  });
 
-export default connect(mapStatetoProps, mapDispatchToProps)(Header);
+
+export default connect(mapStatetoProps)(Header);

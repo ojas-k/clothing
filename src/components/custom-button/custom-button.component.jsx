@@ -4,7 +4,6 @@ import './custom-button.styles.scss';
 
 const CustomButton = ({ children, isGoogleSignIn, inverted, ...otherProps }) => {
   
-  console.log('in sign up button')
   
   return(
   
