@@ -49,8 +49,6 @@ class App extends React.Component {
       
         });
 
-        console.log('inside component did mount')
-        console.log(window.location.href)
 
   }
 
@@ -65,13 +63,7 @@ class App extends React.Component {
   render() {
     return (
       <div className='body'>
-        {console.log('routing within app to homepage')}
-        {console.log(window.location.href)}
         <Route to='/'/>
-        {console.log('routed within app')}
-
-        {console.log(window.location.href)}
-
         <Header/>
         <Switch>
           <Route exact path='/' component = {Homepage}/>

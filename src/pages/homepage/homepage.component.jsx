@@ -12,8 +12,7 @@ import ItemPage from '../itempage/itempage.component'
 
 
 const Homepage = ({tshirts, match}) => {
-    console.log('the match object in the homepage is')
-    console.log(match)
+
     
     return(
 
